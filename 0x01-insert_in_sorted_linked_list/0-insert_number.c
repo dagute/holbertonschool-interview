@@ -41,8 +41,8 @@
 			    aux->next = newone;
 			    return (newone);
 		    }
-        x++;
 	    }
+    x++;    
 	newone->next = temp->next;
 	temp->next = newone;
 	return (newone);
