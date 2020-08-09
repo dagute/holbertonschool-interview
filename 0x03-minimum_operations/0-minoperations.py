@@ -8,8 +8,8 @@ def minOperations(n):
     Given a number n, write a method that calculates the fewest number
     of operations needed to result in exactly n H characters in the file.
     """
+    if n <= 1:
+        return 0
     for x in range(2, n + 1):
         if n % x == 0:
             return minOperations(int(n / x)) + x
-    if n <= 1:
-        return 0
