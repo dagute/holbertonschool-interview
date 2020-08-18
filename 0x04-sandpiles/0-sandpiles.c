@@ -66,7 +66,7 @@ void downfall(int grid[3][3], int x, int y)
 	{
 		a = x + directions[r][0];
 		b = y + directions[r][1];
-		if ((x >= 0 && x < 3) && (y >= 0 && y < 3))
+		if ((a >= 0 && a < 3) && (b >= 0 && b < 3))
 			grid[a][b] += 1;
 	}
 	grid[x][y] -= 4;
