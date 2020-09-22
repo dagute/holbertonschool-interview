@@ -10,7 +10,7 @@ def validUTF8(data):
         if not n_bytes:
             while (m & c):
                 n_bytes += 1
-                m = m >> 1
+                m >>= 1
 
             if not n_bytes:
                 continue
