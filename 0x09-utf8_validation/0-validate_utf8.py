@@ -9,7 +9,9 @@ def validUTF8(data):
         b = bin(b).replace('0b', '').rjust(8, '0')
         if n_bytes != 0:
             n_bytes -= 1
-            if not b.startswith('10'):
+            if not n_bytes:
+                continue
+            if n_bytes == 1 or n_bytes > 4:
                 return False
         elif b[0] == '1':
                 n_bytes = len(b.split('0')[0]) - 1
