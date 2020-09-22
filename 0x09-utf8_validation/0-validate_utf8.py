@@ -11,8 +11,8 @@ def validUTF8(data):
             while m & c:
                 n_bytes += 1
                 m >>= 1
-                if not n_bytes:
-                    continue
+            if not n_bytes:
+                continue
         if n_bytes == 0:
             if (c >> 5) == 0b110:
                 n_bytes = 1
