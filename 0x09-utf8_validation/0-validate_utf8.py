@@ -11,13 +11,18 @@ def validUTF8(data):
             while (m & c):
                 n_bytes += 1
                 m >>= 1
-
             if not n_bytes:
                 continue
-            if n_bytes == 1 or n_bytes > 4:
+            if (c >> 5) == 6:
+                n_bytes = 1
+            elif (c >> 4) == 14:
+                n_bytes = 2
+            elif (c >> 3) == 30:
+                n_bytes = 3
+            elif (c >> 7):
                 return False
         else:
-            if (c >> 6) != 0b10:
+            if (c >> 6) != 2:
                 return False
         n_bytes -= 1
     return n_bytes == 0
