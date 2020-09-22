@@ -20,7 +20,4 @@ def validUTF8(data):
             if (c >> 6) != 0b10:
                 return False
             n_bytes -= 1
-    if n_bytes:
-        return False
-    else:
-        return True
+    return n_bytes == 0
