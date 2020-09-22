@@ -7,12 +7,12 @@ def validUTF8(data):
     n_bytes = 0
     for c in data:
         m = 1 << 7
-        if n_bytes == 0:
+        if not n_bytes:
             while (m & c):
                 n_bytes += 1
                 m = m >> 1
 
-            if n_bytes == 0:
+            if not n_bytes:
                 continue
             if n_bytes == 1 or n_bytes > 4:
                 return False
