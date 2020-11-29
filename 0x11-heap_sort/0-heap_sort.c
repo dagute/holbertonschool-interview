@@ -4,7 +4,6 @@
  * @x: pointer x
  * @y: pointer y
  */
-
 void swap_int(int *x, int *y)
 {
 	int temp = *x;
@@ -18,7 +17,6 @@ void swap_int(int *x, int *y)
  * @i: actual position
  * @total: total size
  */
-
 void max_heapify(int *array, int size, int i, size_t total)
 {
 	int largest = i;
@@ -38,7 +36,6 @@ void max_heapify(int *array, int size, int i, size_t total)
 		max_heapify(array, size, largest, total);
 	}
 }
-
 /**
  * heap_sort - sorts an array of integers in ascending order
  * @array: The array to sort
