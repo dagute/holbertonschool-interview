@@ -1,8 +1,8 @@
 #include "sort.h"
 /**
  * swap_int - change the value of two variable with pointers
- * @a: pointer x
- * @b: pointer y
+ * @x: pointer x
+ * @y: pointer y
  */
 
 void swap_int(int *x, int *y)
