@@ -1,13 +1,14 @@
 #include "sort.h"
 /**
- * merge_sub - merges subarray sub with passed in array
+ * merge_s - merges subarray sub with passed in array
  * @sub: copy of the array
  * @array: array to merge
  * @left: index of element to the left
  * @middle: index of element in the middle
  * @right: index of element to the right
+ * Return: void
  */
-void merge_sub(int *sub, int *array, size_t left,size_t middle, size_t right)
+void merge_s(int *sub, int *array, size_t left,size_t middle, size_t right)
 {
 	size_t i = left, j = middle, k = 0;
 
@@ -54,14 +55,13 @@ void split(int *sub, int *array, size_t left, size_t right)
 		middle = (right - left) / 2 + left;
 		split(sub, array, left, middle);
 		split(sub, array, middle, right);
-		merge_sub(sub, array, left, middle, right);
+		merge_s(sub, array, left, middle, right);
 	}
 }
 /**
 * merge_sort - sort by merging with subarray
 * @array: array to sort
 * @size: size of the array
-*
 * Return: void
 */
 void merge_sort(int *array, size_t size)
