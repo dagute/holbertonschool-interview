@@ -7,5 +7,5 @@
 void print_array(const int *array, size_t size);
 void merge_sort(int *array, size_t size);
 void split(int *sub, int *array, size_t left, size_t right);
-void merge_s(int *sub, int *array, size_t left,size_t middle, size_t right);
+void merge_s(int *sub, int *array, size_t left, size_t middle, size_t right);
 #endif
