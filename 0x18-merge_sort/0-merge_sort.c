@@ -8,7 +8,7 @@
  * @right: index of element to the right
  * Return: void
  */
-void merge_s(int *sub, int *array, size_t left,size_t middle, size_t right)
+void merge_s(int *sub, int *array, size_t left, size_t middle, size_t right)
 {
 	size_t i = left, j = middle, k = 0;
 
