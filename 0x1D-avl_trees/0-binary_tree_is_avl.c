@@ -1,4 +1,4 @@
-#include "binary_s_trees.h"
+#include "binary_trees.h"
 
 /**
  * binary_s_tree - checks if tree is a binary search tree
